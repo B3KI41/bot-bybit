@@ -1,7 +1,0 @@
-ccxt
-python-telegram-bot==13.15
-ta
-pandas
-gspread
-oauth2client
-pytz
