@@ -4,7 +4,7 @@ import os
 os.system(
     "pip install ccxt python-telegram-bot==13.15 ta pandas gspread oauth2client pytz"
 )
-
+import json
 import ccxt
 import pandas as pd
 import ta
@@ -49,7 +49,6 @@ def connect_sheet():
         "https://spreadsheets.google.com/feeds",
         "https://www.googleapis.com/auth/drive"
     ]
-   import json
 creds = ServiceAccountCredentials.from_json_keyfile_dict(json.loads(os.environ['GOOGLE_CREDENTIALS']), scope)
     client = gspread.authorize(creds)
     return client.open("Лог сделок").sheet1
